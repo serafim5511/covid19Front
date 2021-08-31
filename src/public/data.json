@@ -1,0 +1,60 @@
+{
+    "info":{
+        "nome": "Gabriel",
+        "sobrenome": "Serafim",
+        "nomeCompleto": "Gabriel Serafim Souza",
+        "idade": "23 anos",
+        "localidade":"São Paulo, SP",
+        "telefone":"(11)96346-2638",
+        "Hobby": "Cubo mágico, Tênis de mesa",
+        "email":"gabrielserafimsouza@hotmail.com"
+        },
+    "sobre": {
+      "titulo": "",
+      "subtitulo": [
+          "Full-stack developer 🌐",
+          "Just getting started 📈"
+      ],
+      "contatos": [
+          {
+              "titulo": "gabriel-serafim",
+              "icon": "linkedin",
+              "link": "https://www.linkedin.com/in/gabriel-serafim/"
+          },
+          {
+              "titulo": "serafim5511",
+              "icon": "github",
+              "link": "https://github.com/serafim5511"
+          }
+      ]
+  },
+  "skills": {
+      "Languages": [
+          "JavaScript", "Csharp", "HTML5", "CSS3", "TypeScript"
+      ],
+      "Frontend": [
+          "React", "Nextdotjs", "Vercel", "MaterialUI", "Bootstrap","jquery"
+      ],
+      "Backend, Database and Cloud": [
+          "MySQL", "PostgreSQL", "DotNet",
+          { 
+              "alt": "Azure", 
+              "icon": "microsoftazure" 
+          }
+          
+      ],
+      "Mobile": [
+          {
+              "alt": "React_Native",
+              "icon": "react",
+              "backgroundColor": "#424242"
+          },
+          "Expo", "Android"
+      ]
+  },
+  
+  "about": {
+    "description": "Desenvolvedor full stack desde 2020, responsável pelo desenvolvimento, reparo e manutenção de sistemas utilizando metodologias ágeis entre as equipes com as quais trabalhei.",
+    "description2": "Entusiasta em tecnologia e programação, busco sempre aprender coisas novas e melhorar meu conhecimento e a capacidade como programador e se tornar um grande profissional."
+    }
+}
