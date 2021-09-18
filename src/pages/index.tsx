@@ -2,8 +2,6 @@ import React from "react";
 import Heads from './_Head'
 import _Header from './_Header'
 import _SobreMim from './_SobreMim'
-import _Skills from './_Skills'
-import _Contato from './_Contato'
 import _Home from './_Home'
 
 export default function Home() {
@@ -26,9 +24,10 @@ export default function Home() {
 
   return (
     <>
-      <div style={{transform: transform}}>
         <Heads/>
         <_Header/>
+              <div style={{transform: transform}}>
+
         <_Home/>
       </div>
       <_SobreMim/>

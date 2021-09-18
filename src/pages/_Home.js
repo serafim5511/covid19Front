@@ -5,9 +5,9 @@ import IconButton from '@material-ui/core/IconButton';
 import IconMoreIcon from '@material-ui/icons/ExpandMore';
 import React from 'react'
 import { Avatar, colors, Fade, Grid, Hidden, makeStyles, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@material-ui/core";
-import data from '../public/data.json'
 import simpleIcons from 'simple-icons'
 import { iconify } from "../public/util";
+import { Card, CardBody, CardTitle,CardHeader, Container, Row, Col } from "reactstrap";
 
 const wrapper = (sk = []) => sk.map(v => {
   const ic = simpleIcons.get( iconify(v.icon)) 
@@ -22,7 +22,6 @@ const wrapper = (sk = []) => sk.map(v => {
   }
 })
 
-let teste = wrapper(data.sobre.contatos)
 let iobj = {}
 
 const useStyles = makeStyles(theme => ({
@@ -46,51 +45,23 @@ export default function _Home() {
   const handleClick = () => {
     window['scrollTo']({ top: 600, behavior: 'smooth' })
   }
-  var dados = data.info;
   
   return (
     <>
 
-    <Grid container justify="center" className={classes.cont} alignItems="center" id="home">
+    <Grid container  id="home">
     <div className="banner-area">
 
-                        <Grid className="banner-table-cell">
+                        <Grid className="banner-table-cell" style={{   position: 'relative'}}>
                                 <Grid className="container">
-                                    <Grid className="row">
-                                        <Grid className="col-md-12 col-xs-12">
-                                            <section className="intro animate-scale">
-                                                <Grid className="img-area">
-                                                  <Image src={imagemFace} alt="Landscape picture"
-                                                  width={500}
-                                                  height={500}/>
-                                                </Grid>
-                                                <h3 style={{color:'white'}}>{[dados.nome, ' ' ,dados.sobrenome]}</h3>
-
-                                                <Grid className="social-icon">
-                                                    <ul>
-                                                    {
-                                                        teste.map(({ alt,link, icon }, i) =>
-                                                        <li key={i} style={{padding:10}} >
-                                                                    <Tooltip title={alt.titulo} placement="top">
-                                                                        <a variant="rounded" href={link}>
-                                                                            {icon}
-                                                                        </a>
-                                                                    </Tooltip>
-                                                         </li>
-                                                        )
-                                                    }
-                                                        
-                                                    </ul>
-                                                   
-                                                </Grid>
-
-                                            </section>
-                                            <IconButton style={{top: 90}} onClick={handleClick} >
-                                              <IconMoreIcon style={{backgroundColor: 'white', color: 'black',fontSize:50,borderRadius:50,}}/>
-                                            </IconButton>
+                                        <Grid >
+      
+                                          <h1 style={{color:"white"}}>Covid-19</h1>
+                                          <h3 style={{color:"white"}}>
+                                            Painel de casos de doença pelo coronavírus 2021 (COVID-19)
+                                          </h3>
                                         </Grid>
                                         
-                                    </Grid>
                                 </Grid>
                         </Grid>              
     </div>

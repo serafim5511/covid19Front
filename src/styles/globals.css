@@ -398,7 +398,6 @@ img {
 }
 
 canvas {
-  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
@@ -419,7 +418,6 @@ canvas {
 .banner-table-cell {
   display: table-cell;
   vertical-align: middle;
-  text-align: center;
 }
 
 .welcome-text .intro h2 {
@@ -1063,7 +1061,6 @@ ul.port-nav-list li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
 
@@ -1187,6 +1184,12 @@ ul.port-nav-list li a.active {
   letter-spacing: 2px;
   font-size: 11px;
   color: #777;
+}
+.text-white {
+  color: white;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 /*------------- Contact area ends -------------*/
 
