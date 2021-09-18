@@ -1,7 +1,9 @@
+
 module.exports = {
-  reactStrictMode: true,
-  i18n: {
-    locales: ['pt-BR','en-US'],
-    defaultLocale: 'pt-BR',
-      }
-}
+  exportPathMap: async function() {
+    const paths = {
+      '/': { page: '/' }
+    };
+    return paths; //<--this was missing previously
+  }
+};
