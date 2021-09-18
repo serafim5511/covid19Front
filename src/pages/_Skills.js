@@ -65,7 +65,7 @@ export default function _Skills() {
                 setAnimate(true)
         })
         observer.observe(animRef.current)
-        return () => observer.unobserve(animRef.current)
+        return () => observer.unobserve(animRef)
     }, [])
     return (        
       <>     
