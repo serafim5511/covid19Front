@@ -4,10 +4,5 @@ module.exports = {
       '/': { page: '/' }
     };
     return paths; //<--this was missing previously
-  },
-  reactStrictMode: true,
-  i18n: {
-    locales: ['pt-BR'],
-    defaultLocale: 'pt-BR',
-      }
-}
+  }
+}; 
