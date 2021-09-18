@@ -1,6 +1,7 @@
 import { PolarArea , Bar, Doughnut,Pie } from "react-chartjs-2";
 import { Card, CardBody, CardTitle, Container, Row, Col } from "reactstrap";
 import React from 'react'
+
 export async function getStaticProps (){
   const response= await fetch('https://covid-api.mmediagroup.fr/v1/cases');
   const data= await response.json();
@@ -12,6 +13,7 @@ export async function getStaticProps (){
   }
 }
 export default function _SobreMim(props:any) {
+console.log(props.paises);
   var pais = Object.keys(props.paises)[23];
   function gerar_cor(opacidade = 1) {
     let r = Math.random() * 255;
