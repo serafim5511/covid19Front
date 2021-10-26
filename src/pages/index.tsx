@@ -4,9 +4,18 @@ import _Header from './_Header'
 import _SobreMim from './_SobreMim'
 import _Home from './_Home'
 
-
-export default function Home() {
-
+export async function getStaticProps (){
+  //const response= await fetch('http://covid-api.mmediagroup.fr/v1/cases');
+  const response= await fetch('https://devapicovid.azurewebsites.net/api/Get');
+  var data= await response.json();
+  return{
+    props:{
+      paises:data,
+    },
+    revalidate:60*60*24,
+  }
+}
+export default function Home(props:any) {
   {/*const [transform, setTransform] = React.useState("translate3d(0,0px,0)");
   {/*React.useEffect(() => {
     if (window.innerWidth >= 768) {
@@ -31,7 +40,7 @@ export default function Home() {
         {/*<div style={{transform: transform}}>*/} 
           <_Home/>
         {/* </div>*/} 
-        <_SobreMim/>
+        <_SobreMim props={props}/>
     </>
   )
 }

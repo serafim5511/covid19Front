@@ -1,5 +1,5 @@
-import React from 'react';
-import { AppBar, useScrollTrigger } from '@material-ui/core';
+import React, { useContext } from 'react';
+import { AppBar, Container, IconButton, makeStyles, Toolbar, Typography, useScrollTrigger } from '@material-ui/core';
 import Link from 'next/link'
 
 interface Props{

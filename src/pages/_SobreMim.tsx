@@ -4,19 +4,11 @@ import React from 'react'
 import { ViewArrayTwoTone } from "@material-ui/icons";
 import dados from '../public/data.json';
 
-export async function getStaticProps (){
-  const response= await fetch('https://covid-api.mmediagroup.fr/v1/cases');
-  var data= await response.json();
 
-  return{
-    props:{
-      paises:data,
-    },
-    revalidate:60*60*24,
-  }
-}
+
 export default function _SobreMim(props:any) {
-  var result =props.paises ==null ? dados : props.paises;
+
+  var result =props.props.paises ==null ? dados :props.props.paises;
 
   var pais = Object.keys(result)[23];
   function gerar_cor(opacidade = 1) {
