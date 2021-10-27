@@ -5,28 +5,20 @@ import _SobreMim from './_SobreMim'
 import _Home from './_Home'
 
 export async function getStaticProps (){
-  const response = await fetch('https://devapicovid.azurewebsites.net/api/Get');
-  if(response.json == null){
-    const response = await fetch('http://covid-api.mmediagroup.fr/v1/cases');
-  
+
+    var response = await fetch('https://devapicovid.azurewebsites.net/api/Get');
+    if(response.ok){
+      var response = await fetch('http://covid-api.mmediagroup.fr/v1/cases');
+    }
     var data= await response.json();
+
     return{
       props:{
         paises:data,
       },
       revalidate:60*60*24,
     }
-  }
-  else
-  {
-    var data= await response.json();
-    return{
-      props:{
-        paises:data.props,
-      },
-      revalidate:60*60*24,
-    }
-  }
+  
 }
 export default function Home(props:any) {
   {/*const [transform, setTransform] = React.useState("translate3d(0,0px,0)");
@@ -53,7 +45,7 @@ export default function Home(props:any) {
         {/*<div style={{transform: transform}}>*/} 
           <_Home/>
         {/* </div>*/} 
-        <_SobreMim props={props}/>
+        <_SobreMim props={props.paises}/>
     </>
   )
 }

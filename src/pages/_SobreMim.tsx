@@ -4,11 +4,8 @@ import React from 'react'
 import { ViewArrayTwoTone } from "@material-ui/icons";
 import dados from '../public/data.json';
 
-
-
 export default function _SobreMim(props:any) {
-
-  var result =props.paises == null ? dados :props.paises;
+  var result =props.props == null ? dados : props.props;
 
   var pais = Object.keys(result)[23];
   function gerar_cor(opacidade = 1) {
