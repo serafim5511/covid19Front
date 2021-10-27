@@ -8,7 +8,7 @@ import dados from '../public/data.json';
 
 export default function _SobreMim(props:any) {
 
-  var result =props.props.paises ==null ? dados :props.props.paises;
+  var result =props.paises == null ? dados :props.paises;
 
   var pais = Object.keys(result)[23];
   function gerar_cor(opacidade = 1) {
