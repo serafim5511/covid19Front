@@ -5,8 +5,10 @@ import _SobreMim from './_SobreMim'
 import _Home from './_Home'
 
 export async function getStaticProps (){
-  //const response= await fetch('http://covid-api.mmediagroup.fr/v1/cases');
   const response= await fetch('https://devapicovid.azurewebsites.net/api/Get');
+  if(response.json == null){
+    const response= await fetch('http://covid-api.mmediagroup.fr/v1/cases');
+  }
   var data= await response.json();
   return{
     props:{
