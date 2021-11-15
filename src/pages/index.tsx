@@ -23,6 +23,8 @@ export async function getStaticProps (){
   
 }
 export default function Home(props:any) {
+  console.log(props.paises);
+
   {/*const [transform, setTransform] = React.useState("translate3d(0,0px,0)");
   {/*React.useEffect(() => {
     if (window.innerWidth >= 768) {
