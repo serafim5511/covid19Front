@@ -8,13 +8,11 @@ export async function getStaticProps (){
 
     var response = await fetch('https://devapicovid.azurewebsites.net/api/Get');
     console.log(response);
-    //if(response.ok){ 
-      //var response = await fetch('http://covid-api.mmediagroup.fr/v1/cases');
-    //}
+    if(response.ok){ 
+      var response = await fetch('http://covid-api.mmediagroup.fr/v1/cases');
+    }
     var data= await response.json();
-    console.log(data);
-
-    return{
+        return{
       props:{
         paises:data,
       },
@@ -23,8 +21,6 @@ export async function getStaticProps (){
   
 }
 export default function Home(props:any) {
-  console.log(props.paises);
-
   {/*const [transform, setTransform] = React.useState("translate3d(0,0px,0)");
   {/*React.useEffect(() => {
     if (window.innerWidth >= 768) {
