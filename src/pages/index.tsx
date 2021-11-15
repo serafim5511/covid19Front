@@ -7,8 +7,8 @@ import _Home from './_Home'
 export async function getStaticProps (){
 
     var response = await fetch('https://devapicovid.azurewebsites.net/api/Get');
-    //console.log(response);
-    //if(response.ok){
+    console.log(response);
+    //if(response.ok){ 
       //var response = await fetch('http://covid-api.mmediagroup.fr/v1/cases');
     //}
     var data= await response.json();
